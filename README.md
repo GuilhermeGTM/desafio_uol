@@ -1,5 +1,4 @@
 #  Desafio Uol
-foi feito em python
 https://github.com/uolhost/test-backEnd-Java
 
 # Sobre o projeto
