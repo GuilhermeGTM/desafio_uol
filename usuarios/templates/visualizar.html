@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block 'body' %}
+    <div class="container">
+        <br>
+        <table class="table">
+            <center>
+                <h1 >Jogadores Cadastrados</h1>
+            </center>
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">E-Mail</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Codinome</th>
+                    <th scope="col">Grupo</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                <tr>
+                    <th scope="row">{{usuario.nome}}</th>
+                    <td>{{usuario.email}}</td>
+                    <td>{{usuario.telefone}}</td>
+                    <td>{{usuario.codinome}}</td>
+                    <td>{{usuario.get_grupo_display}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/cadastro/" class="btn btn-success">
+            Cadastrar Jogadores
+      </a>
+    </div>
+{% endblock 'body' %}
+
+
+
+
+

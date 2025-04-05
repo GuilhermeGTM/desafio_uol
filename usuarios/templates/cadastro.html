@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block 'body' %}
+    <div class="container">
+        <center>
+            <h1 >Cadastro de Jogador</h1>
+        </center>
+
+            <div class="row">
+
+            <div class="col">
+            </div>
+
+                <div class="col">
+                    <form action="{% url "cadastro" %}" method="POST"> {% csrf_token %}
+                        <br>
+                        <div class="mb-3">
+                            {{form.nome.as_field_group}}
+                        </div>
+                        <div class="mb-3">
+                            {{form.email.as_field_group}}
+                        </div>
+                        <div class="mb-3">
+                            {{form.telefone.as_field_group}}
+                        </div>
+                        <div class="mb-3">
+                            {{form.grupo.as_field_group}}
+                        </div>
+                        <input type="submit" class="btn btn-success" value="Cadastro">
+
+                        <a href="/visualizar/" class="btn btn-success">
+                             Listar Jogadores
+                       </a>
+
+                    </form> 
+                </div>
+              
+            <div class="col">
+            </div>
+
+            </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+{% endblock 'body' %}
